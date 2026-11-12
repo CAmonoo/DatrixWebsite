@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="gFin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3FB3EA"/>
+      <stop offset="1" stop-color="#1173B4"/>
+    </linearGradient>
+    <filter id="shF" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A3D66" flood-opacity="0.20"/>
+    </filter>
+    <filter id="shF2" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#0A3D66" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- halo backdrop shapes -->
+  <ellipse cx="300" cy="310" rx="205" ry="195" fill="#D9EDFB"/>
+  <circle cx="652" cy="98" r="24" fill="#D9EDFB"/>
+  <circle cx="128" cy="470" r="16" fill="#D9EDFB"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="408" cy="545" rx="252" ry="16" fill="#0A3D66" opacity="0.10"/>
+
+  <!-- main blob -->
+  <path d="M 400 62 C 516 56 626 108 668 200 C 708 288 700 388 640 458 C 584 524 494 556 392 552 C 288 548 194 516 148 438 C 100 362 104 262 152 186 C 202 108 292 68 400 62 Z" fill="url(#gFin)"/>
+
+  <!-- tone-on-tone clouds -->
+  <g fill="#0F6BA8" opacity="0.5">
+    <g transform="translate(480,128)">
+      <rect x="0" y="0" width="60" height="15" rx="7.5"/>
+      <circle cx="15" cy="-4" r="9"/>
+      <circle cx="34" cy="-2" r="7"/>
+    </g>
+    <g transform="translate(170,300)">
+      <rect x="0" y="0" width="50" height="13" rx="6.5"/>
+      <circle cx="13" cy="-3" r="7"/>
+      <circle cx="28" cy="-2" r="6"/>
+    </g>
+  </g>
+
+  <!-- floating dots + sparkle -->
+  <circle cx="636" cy="118" r="4" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="150" cy="196" r="3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="672" cy="286" r="3" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="206" cy="150" r="4" fill="#FFB55A"/>
+  <circle cx="590" cy="500" r="4" fill="#FFB55A"/>
+  <path d="M 628 226 L 630.5 232.5 L 637 235 L 630.5 237.5 L 628 244 L 625.5 237.5 L 619 235 L 625.5 232.5 Z" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- leaves poking from blob edge -->
+  <g transform="translate(688,452)">
+    <ellipse cx="0" cy="0" rx="26" ry="10" transform="rotate(-35)" fill="#1E7A52"/>
+    <ellipse cx="12" cy="11" rx="20" ry="8" transform="rotate(-10)" fill="#57B98A"/>
+  </g>
+
+  <!-- plant bottom-left -->
+  <g transform="translate(160,470)">
+    <path d="M 0 32 C -2 8 -4 -10 -13 -28 M 4 32 C 6 6 8 -12 17 -28 M 2 32 C 2 4 2 -12 2 -32" stroke="#2E7D52" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="-15" cy="-30" rx="14" ry="6" transform="rotate(-32 -15 -30)" fill="#2E9E6B"/>
+    <ellipse cx="19" cy="-30" rx="14" ry="6" transform="rotate(30 19 -30)" fill="#57B98A"/>
+    <ellipse cx="2" cy="-36" rx="13" ry="6" transform="rotate(-88 2 -36)" fill="#1E7A52"/>
+    <path d="M -15 32 L 19 32 L 14 60 Q 2 66 -10 60 Z" fill="#16324F"/>
+    <rect x="-18" y="28" width="40" height="9" rx="4.5" fill="#1E3A5F"/>
+  </g>
+
+  <!-- ======== main dashboard browser ======== -->
+  <g filter="url(#shF)">
+    <rect x="320" y="128" width="316" height="232" rx="14" fill="#FFFFFF"/>
+  </g>
+  <path d="M 320 142 C 320 134 326 128 334 128 L 622 128 C 630 128 636 134 636 142 L 636 164 L 320 164 Z" fill="#21346B"/>
+  <circle cx="338" cy="146" r="5" fill="#F7941D"/>
+  <circle cx="354" cy="146" r="5" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="370" cy="146" r="5" fill="#57B98A"/>
+  <rect x="420" y="140" width="180" height="12" rx="6" fill="#FFFFFF" opacity="0.22"/>
+
+  <!-- line chart -->
+  <polyline points="344,266 384,238 420,254 458,214 498,232 540,196 592,206" stroke="#2E9E6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="540" cy="196" r="6" fill="#F7941D" stroke="#FFFFFF" stroke-width="3"/>
+  <g fill="#EAF2FB">
+    <rect x="344" y="292" width="118" height="9" rx="4.5"/>
+    <rect x="344" y="310" width="86" height="9" rx="4.5"/>
+    <rect x="344" y="328" width="102" height="9" rx="4.5"/>
+  </g>
+  <!-- KPI tiles -->
+  <g transform="translate(488,286)">
+    <rect x="0" y="0" width="58" height="52" rx="9" fill="#F7941D"/>
+    <rect x="10" y="12" width="38" height="7" rx="3.5" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="10" y="26" width="26" height="7" rx="3.5" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+  <g transform="translate(558,286)">
+    <rect x="0" y="0" width="58" height="52" rx="9" fill="#2D9CDB"/>
+    <rect x="10" y="12" width="38" height="7" rx="3.5" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="10" y="26" width="26" height="7" rx="3.5" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+
+  <!-- ======== tilted invoice card (left) ======== -->
+  <g transform="rotate(-8 205 360)" filter="url(#shF2)">
+    <rect x="120" y="252" width="172" height="212" rx="12" fill="#FFFFFF"/>
+    <rect x="138" y="274" width="64" height="12" rx="6" fill="#21346B"/>
+    <rect x="138" y="298" width="136" height="8" rx="4" fill="#D9E4F1"/>
+    <rect x="138" y="314" width="118" height="8" rx="4" fill="#D9E4F1"/>
+    <rect x="138" y="330" width="128" height="8" rx="4" fill="#D9E4F1"/>
+    <rect x="138" y="346" width="96" height="8" rx="4" fill="#D9E4F1"/>
+    <rect x="138" y="372" width="136" height="2.5" fill="#E4ECF6"/>
+    <rect x="138" y="386" width="52" height="11" rx="5.5" fill="#21346B"/>
+    <rect x="212" y="382" width="62" height="18" rx="9" fill="#F7941D"/>
+    <!-- green tick badge -->
+    <circle cx="272" cy="446" r="26" fill="#2E9E6B"/>
+    <path d="M 259 446 L 268 455 L 286 436" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ======== coin stack (right) ======== -->
+  <g transform="translate(596,438)">
+    <ellipse cx="34" cy="86" rx="44" ry="10" fill="#0A3D66" opacity="0.14"/>
+    <g fill="#F7941D" stroke="#E8720C" stroke-width="2.5">
+      <ellipse cx="34" cy="78" rx="34" ry="11"/>
+      <ellipse cx="30" cy="58" rx="34" ry="11"/>
+      <ellipse cx="36" cy="38" rx="34" ry="11"/>
+    </g>
+    <ellipse cx="36" cy="38" rx="20" ry="6" fill="#FFB55A"/>
+    <text x="36" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">$</text>
+  </g>
+
+  <!-- ======== calculator chip (top right) ======== -->
+  <g transform="translate(652,168) rotate(8)" filter="url(#shF2)">
+    <rect x="0" y="0" width="76" height="88" rx="12" fill="#FFFFFF"/>
+    <rect x="10" y="10" width="56" height="22" rx="5" fill="#21346B"/>
+    <g fill="#F7941D">
+      <rect x="10" y="42" width="14" height="12" rx="3"/>
+      <rect x="31" y="42" width="14" height="12" rx="3"/>
+      <rect x="52" y="42" width="14" height="12" rx="3"/>
+      <rect x="10" y="62" width="14" height="12" rx="3"/>
+      <rect x="31" y="62" width="14" height="12" rx="3"/>
+    </g>
+    <rect x="52" y="62" width="14" height="12" rx="3" fill="#2D9CDB"/>
+  </g>
+
+  <!-- ======== female standing left, pointing at dashboard ======== -->
+  <g>
+    <ellipse cx="182" cy="542" rx="34" ry="6" fill="#0A3D66" opacity="0.12"/>
+    <ellipse cx="169" cy="537" rx="9" ry="4.5" transform="rotate(-12 169 537)" fill="#10253F"/>
+    <ellipse cx="193" cy="539" rx="9" ry="4.5" fill="#10253F"/>
+    <path d="M 175 536 C 173 512 173 492 177 470" stroke="#16324F" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 190 538 C 192 514 189 492 185 470" stroke="#1E3A5F" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 170 468 C 167 434 169 412 174 403 C 180 397 198 397 204 403 C 209 412 210 434 206 468 L 172 468 Z" fill="#21346B"/>
+    <path d="M 183 399 L 189 417 L 196 399 Z" fill="#FFFFFF"/>
+    <path d="M 174 410 C 166 418 166 428 171 433" stroke="#21346B" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 203 408 C 220 402 236 396 250 390" stroke="#21346B" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="172" cy="435" r="5" fill="#C98850"/>
+    <circle cx="253" cy="388" r="5" fill="#C98850"/>
+    <circle cx="187" cy="382" r="14.5" fill="#C98850"/>
+    <path d="M 172 378 C 172 362 200 360 202 378 C 202 384 199 388 196 390 C 198 382 194 376 187 376 C 180 376 176 381 177 390 C 174 387 172 383 172 378 Z" fill="#16324F"/>
+    <circle cx="191" cy="385" r="2.4" fill="#5C3A1E"/>
+  </g>
+
+  <!-- ======== male seated on coins area with laptop ======== -->
+  <g>
+    <path d="M 520 500 C 520 480 522 466 526 452" stroke="#16324F" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 548 502 C 550 484 550 468 548 454" stroke="#1E3A5F" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="516" cy="504" rx="9" ry="4.5" transform="rotate(-14 516 504)" fill="#10253F"/>
+    <ellipse cx="552" cy="506" rx="9" ry="4.5" fill="#10253F"/>
+    <path d="M 512 458 C 510 432 512 414 518 406 C 524 400 546 400 552 406 C 558 414 559 432 556 458 Z" fill="#2D9CDB"/>
+    <!-- laptop on lap -->
+    <path d="M 514 462 L 556 462 L 560 476 L 510 476 Z" fill="#16324F"/>
+    <rect x="518" y="430" width="36" height="28" rx="4" fill="#1E3A5F" transform="rotate(6 518 430)"/>
+    <path d="M 516 412 C 508 418 506 428 510 434" stroke="#2D9CDB" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 554 414 C 562 420 564 430 560 436" stroke="#2D9CDB" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="509" cy="436" r="5" fill="#F4A988"/>
+    <circle cx="561" cy="438" r="5" fill="#F4A988"/>
+    <circle cx="536" cy="388" r="14" fill="#F4A988"/>
+    <path d="M 522 386 C 522 372 550 370 550 386 C 550 391 548 394 545 396 C 547 389 543 383 536 383 C 529 383 525 388 526 396 C 523 393 522 390 522 386 Z" fill="#F7941D"/>
+    <circle cx="540" cy="390" r="2.4" fill="#E88B65"/>
+  </g>
+
+  <!-- ======== floating app chips ======== -->
+  <!-- bank chip -->
+  <g transform="translate(560,300) rotate(-6)" filter="url(#shF2)">
+    <rect x="0" y="0" width="64" height="56" rx="10" fill="#FFFFFF"/>
+    <path d="M 8 24 L 32 10 L 56 24 Z" fill="#F7941D"/>
+    <rect x="12" y="28" width="6" height="16" fill="#21346B"/>
+    <rect x="23" y="28" width="6" height="16" fill="#21346B"/>
+    <rect x="34" y="28" width="6" height="16" fill="#21346B"/>
+    <rect x="45" y="28" width="6" height="16" fill="#21346B"/>
+    <rect x="8" y="46" width="48" height="4" rx="2" fill="#21346B"/>
+  </g>
+  <!-- pie chart chip -->
+  <g transform="translate(268,158) rotate(10)" filter="url(#shF2)">
+    <rect x="0" y="0" width="58" height="58" rx="10" fill="#FFFFFF"/>
+    <circle cx="29" cy="29" r="15" fill="#2D9CDB"/>
+    <path d="M 29 29 L 29 14 A 15 15 0 0 1 43 22 Z" fill="#F7941D"/>
+  </g>
+</svg>

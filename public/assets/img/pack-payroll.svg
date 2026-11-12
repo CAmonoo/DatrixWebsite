@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="275" viewBox="0 0 340 360" fill="none">
+  <defs>
+    <linearGradient id="ppB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3FB3EA"/>
+      <stop offset="1" stop-color="#1173B4"/>
+    </linearGradient>
+    <filter id="ppS" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#061B33" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="172" cy="338" rx="128" ry="12" fill="#061B33" opacity="0.35"/>
+
+  <!-- box side panel -->
+  <path d="M 260 62 L 296 84 L 296 330 L 260 316 Z" fill="#C8D6EA"/>
+  <!-- box top flap -->
+  <path d="M 44 62 L 80 44 L 296 44 L 260 62 Z" fill="#DEE7F2"/>
+  <!-- box front -->
+  <g filter="url(#ppS)">
+    <rect x="44" y="62" width="216" height="254" rx="6" fill="#FFFFFF"/>
+  </g>
+  <rect x="44" y="62" width="216" height="14" fill="#F4F8FC"/>
+
+  <!-- Datrix brand row -->
+  <g transform="translate(60,88)">
+    <circle cx="12" cy="12" r="12" fill="#F7941D"/>
+    <path d="M 12 3 L 18.5 19 L 12 15 L 5.5 19 Z" fill="#21346B"/>
+    <text x="32" y="12" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#21346B">Datrix</text>
+    <text x="32" y="24" font-family="Arial, sans-serif" font-size="6.5" fill="#5C6B8A" letter-spacing="1.4">TECH SOLUTIONS</text>
+  </g>
+
+  <!-- product wordmark -->
+  <text x="60" y="146" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#21346B">HRPhelo</text>
+  <rect x="60" y="156" width="52" height="5" rx="2.5" fill="#1B75BB"/>
+
+  <!-- mini scene window -->
+  <g transform="translate(60,176)">
+    <rect x="0" y="0" width="184" height="106" rx="10" fill="#EAF4FB"/>
+    <path d="M 12 96 C 66 84 76 28 172 20 L 172 96 Z" fill="url(#ppB)" opacity="0.16"/>
+    <!-- employee card -->
+    <rect x="14" y="14" width="80" height="78" rx="7" fill="#FFFFFF"/>
+    <circle cx="38" cy="38" r="12" fill="#1B75BB"/>
+    <circle cx="38" cy="34" r="5" fill="#FFFFFF"/>
+    <path d="M 30 47 C 32 40 44 40 46 47 L 46 50 L 30 50 Z" fill="#FFFFFF"/>
+    <rect x="58" y="30" width="28" height="7" rx="3.5" fill="#21346B"/>
+    <rect x="58" y="42" width="20" height="6" rx="3" fill="#D9E4F1"/>
+    <g fill="#F7941D">
+      <rect x="22" y="58" width="6" height="6" rx="1.5"/>
+      <rect x="31" y="58" width="6" height="6" rx="1.5"/>
+      <rect x="40" y="58" width="6" height="6" rx="1.5"/>
+      <rect x="49" y="58" width="6" height="6" rx="1.5"/>
+      <rect x="58" y="58" width="6" height="6" rx="1.5"/>
+    </g>
+    <rect x="22" y="72" width="52" height="6" rx="3" fill="#D9E4F1"/>
+    <!-- payslip -->
+    <g transform="translate(106,22) rotate(4)">
+      <rect x="0" y="0" width="62" height="66" rx="6" fill="#FFFFFF"/>
+      <rect x="8" y="9" width="30" height="7" rx="3.5" fill="#1B75BB"/>
+      <rect x="8" y="22" width="46" height="5" rx="2.5" fill="#D9E4F1"/>
+      <rect x="8" y="31" width="38" height="5" rx="2.5" fill="#D9E4F1"/>
+      <rect x="8" y="40" width="42" height="5" rx="2.5" fill="#D9E4F1"/>
+      <rect x="8" y="50" width="24" height="9" rx="4.5" fill="#2E9E6B"/>
+      <text x="42" y="58" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2E9E6B">PAID</text>
+    </g>
+    <!-- badge -->
+    <circle cx="164" cy="88" r="12" fill="#F7941D"/>
+    <circle cx="164" cy="85" r="4" fill="#FFFFFF"/>
+    <path d="M 158 95 C 159 90 169 90 170 95 L 170 97 L 158 97 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- accent base strip -->
+  <path d="M 44 302 L 260 302 L 260 310 C 260 313 258 316 254 316 L 50 316 C 46 316 44 313 44 310 Z" fill="#1B75BB"/>
+  <rect x="60" y="322" width="96" height="6" rx="3" fill="#C8D6EA" opacity="0.8"/>
+</svg>

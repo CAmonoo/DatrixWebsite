@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none">
+  <defs>
+    <linearGradient id="gWc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3FB3EA"/>
+      <stop offset="1" stop-color="#1173B4"/>
+    </linearGradient>
+    <filter id="shX" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#0A3D66" flood-opacity="0.20"/>
+    </filter>
+    <filter id="shX2" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0A3D66" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- halo backdrop -->
+  <ellipse cx="420" cy="280" rx="230" ry="214" fill="#D9EDFB"/>
+  <circle cx="110" cy="98" r="22" fill="#D9EDFB"/>
+  <circle cx="712" cy="420" r="15" fill="#D9EDFB"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="400" cy="514" rx="268" ry="15" fill="#0A3D66" opacity="0.10"/>
+
+  <!-- main blob -->
+  <path d="M 402 46 C 510 40 614 88 654 172 C 692 254 686 344 632 408 C 580 470 496 500 402 496 C 308 492 224 462 182 392 C 140 322 144 232 188 164 C 234 94 310 52 402 46 Z" fill="url(#gWc)"/>
+
+  <!-- tone-on-tone clouds -->
+  <g fill="#0F6BA8" opacity="0.5">
+    <g transform="translate(196,120)">
+      <rect x="0" y="0" width="52" height="13" rx="6.5"/>
+      <circle cx="13" cy="-3" r="7"/>
+      <circle cx="29" cy="-2" r="6"/>
+    </g>
+    <g transform="translate(576,438)">
+      <rect x="0" y="0" width="44" height="12" rx="6"/>
+      <circle cx="11" cy="-3" r="6"/>
+      <circle cx="24" cy="-2" r="5"/>
+    </g>
+  </g>
+
+  <!-- floating dots + sparkle -->
+  <circle cx="128" cy="190" r="4" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="676" cy="180" r="3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="118" cy="330" r="3" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="612" cy="86" r="4" fill="#FFB55A"/>
+  <path d="M 152 246 L 154.5 252.5 L 161 255 L 154.5 257.5 L 152 264 L 149.5 257.5 L 143 255 L 149.5 252.5 Z" fill="#FFFFFF" opacity="0.9"/>
+  <path d="M 636 246 L 638 251 L 643 253 L 638 255 L 636 260 L 634 255 L 629 253 L 634 251 Z" fill="#FFB55A" opacity="0.9"/>
+
+  <!-- leaves -->
+  <g transform="translate(96,408)">
+    <ellipse cx="0" cy="0" rx="24" ry="9" transform="rotate(35)" fill="#1E7A52"/>
+    <ellipse cx="-11" cy="10" rx="18" ry="7" transform="rotate(12)" fill="#57B98A"/>
+  </g>
+
+  <!-- ======== modular CRM frame (centre) ======== -->
+  <g filter="url(#shX)">
+    <rect x="258" y="112" width="288" height="232" rx="14" fill="#FFFFFF"/>
+  </g>
+  <path d="M 258 126 C 258 118 264 112 272 112 L 532 112 C 540 112 546 118 546 126 L 546 148 L 258 148 Z" fill="#21346B"/>
+  <circle cx="274" cy="130" r="4.5" fill="#F7941D"/>
+  <circle cx="288" cy="130" r="4.5" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="302" cy="130" r="4.5" fill="#57B98A"/>
+  <rect x="356" y="124" width="110" height="11" rx="5.5" fill="#FFFFFF" opacity="0.22"/>
+
+  <!-- module slot 1: filled sales pipeline -->
+  <g transform="translate(278,166)">
+    <rect x="0" y="0" width="120" height="76" rx="9" fill="#F2F7FC"/>
+    <rect x="10" y="10" width="52" height="9" rx="4.5" fill="#1B75BB"/>
+    <g>
+      <rect x="10" y="28" width="26" height="34" rx="4" fill="#2D9CDB"/>
+      <rect x="42" y="36" width="26" height="26" rx="4" fill="#1B75BB"/>
+      <rect x="74" y="44" width="26" height="18" rx="4" fill="#21346B"/>
+    </g>
+    <circle cx="102" cy="14" r="7" fill="#2E9E6B"/>
+    <path d="M 99 14 L 101.5 16.5 L 106 11.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- module slot 2: filled marketing -->
+  <g transform="translate(412,166)">
+    <rect x="0" y="0" width="120" height="76" rx="9" fill="#F2F7FC"/>
+    <rect x="10" y="10" width="52" height="9" rx="4.5" fill="#F7941D"/>
+    <path d="M 12 30 L 12 54 L 30 54 L 30 44 L 48 44 L 48 54 L 66 54 L 66 36 L 84 36 L 84 54 L 102 54 L 102 26" stroke="#F7941D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="102" cy="14" r="7" fill="#2E9E6B"/>
+    <path d="M 99 14 L 101.5 16.5 L 106 11.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- module slot 3: being filled by character (empty with dashed outline) -->
+  <g transform="translate(278,254)">
+    <rect x="0" y="0" width="120" height="70" rx="9" fill="#FFFFFF" stroke="#2D9CDB" stroke-width="2.5" stroke-dasharray="6 6"/>
+    <g stroke="#9FB4D8" stroke-width="3.5" stroke-linecap="round">
+      <path d="M 46 26 L 74 26 M 60 26 L 60 44 M 52 38 L 68 38"/>
+    </g>
+  </g>
+
+  <!-- module slot 4: filled support -->
+  <g transform="translate(412,254)">
+    <rect x="0" y="0" width="120" height="70" rx="9" fill="#F2F7FC"/>
+    <circle cx="28" cy="30" r="13" fill="#2E9E6B"/>
+    <path d="M 20 30 C 20 20 36 20 36 30 M 16 30 C 16 36 22 42 28 42 C 34 42 40 36 40 30" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="52" y="20" width="52" height="8" rx="4" fill="#21346B"/>
+    <rect x="52" y="34" width="38" height="7" rx="3.5" fill="#9FB4D8"/>
+    <rect x="52" y="46" width="44" height="7" rx="3.5" fill="#D9E4F1"/>
+  </g>
+
+  <!-- ======== sliders chip (top right) ======== -->
+  <g transform="translate(590,128) rotate(8)" filter="url(#shX2)">
+    <rect x="0" y="0" width="72" height="78" rx="12" fill="#FFFFFF"/>
+    <path d="M 12 22 L 60 22" stroke="#D9E4F1" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="24" cy="22" r="8" fill="#F7941D"/>
+    <path d="M 12 42 L 60 42" stroke="#D9E4F1" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="46" cy="42" r="8" fill="#1B75BB"/>
+    <path d="M 12 62 L 60 62" stroke="#D9E4F1" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="34" cy="62" r="8" fill="#2E9E6B"/>
+  </g>
+
+  <!-- ======== price tag chip (bottom left) ======== -->
+  <g transform="translate(150,388) rotate(-10)" filter="url(#shX2)">
+    <path d="M 6 10 C 6 7 8 5 11 5 L 34 5 L 62 26 L 34 47 L 11 47 C 8 47 6 45 6 42 Z" fill="#F7941D"/>
+    <circle cx="17" cy="15" r="4" fill="#FFFFFF"/>
+    <rect x="22" y="20" width="26" height="5" rx="2.5" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <!-- ======== male placing module into empty slot ======== -->
+  <g>
+    <ellipse cx="600" cy="500" rx="34" ry="6" fill="#0A3D66" opacity="0.12"/>
+    <path d="M 590 494 C 596 472 600 452 600 432" stroke="#16324F" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 612 496 C 610 474 608 452 608 432" stroke="#1E3A5F" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="586" cy="498" rx="9" ry="4.5" transform="rotate(-16 586 498)" fill="#10253F"/>
+    <ellipse cx="616" cy="500" rx="9" ry="4.5" fill="#10253F"/>
+    <path d="M 584 436 C 582 410 584 392 590 384 C 596 378 618 378 624 384 C 630 392 631 410 628 436 Z" fill="#F7941D"/>
+    <path d="M 590 392 C 580 400 576 410 574 422" stroke="#F7941D" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 626 392 C 616 400 612 410 610 422" stroke="#F7941D" stroke-width="9" stroke-linecap="round" transform="translate(0,0)"/>
+    <circle cx="573" cy="426" r="5" fill="#C98850"/>
+    <circle cx="609" cy="426" r="5" fill="#C98850"/>
+    <circle cx="606" cy="366" r="14" fill="#C98850"/>
+    <path d="M 592 364 C 592 350 620 348 620 364 C 620 369 618 372 615 374 C 617 367 613 361 606 361 C 599 361 595 366 596 374 C 593 371 592 368 592 364 Z" fill="#16324F"/>
+    <circle cx="610" cy="368" r="2.4" fill="#5C3A1E"/>
+    <!-- module piece held out toward frame -->
+    <g transform="translate(528,300) rotate(-14)" filter="url(#shX2)">
+      <rect x="0" y="0" width="64" height="48" rx="8" fill="#FFFFFF" stroke="#2D9CDB" stroke-width="3"/>
+      <rect x="9" y="9" width="28" height="9" rx="4.5" fill="#2D9CDB"/>
+      <rect x="9" y="26" width="40" height="6" rx="3" fill="#D9E4F1"/>
+      <rect x="9" y="36" width="30" height="6" rx="3" fill="#D9E4F1"/>
+    </g>
+  </g>
+
+  <!-- plant right edge -->
+  <g transform="translate(716,462)">
+    <path d="M 0 0 C -2 -10 -4 -18 -9 -28 M 4 0 C 6 -8 8 -16 12 -24" stroke="#2E7D52" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-30" rx="10" ry="4.5" transform="rotate(-32 -11 -30)" fill="#2E9E6B"/>
+    <ellipse cx="14" cy="-26" rx="10" ry="4.5" transform="rotate(30 14 -26)" fill="#57B98A"/>
+  </g>
+</svg>

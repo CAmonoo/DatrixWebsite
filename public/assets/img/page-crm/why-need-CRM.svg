@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none">
+  <defs>
+    <linearGradient id="gWn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3FB3EA"/>
+      <stop offset="1" stop-color="#1173B4"/>
+    </linearGradient>
+    <filter id="shW" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#0A3D66" flood-opacity="0.20"/>
+    </filter>
+    <filter id="shW2" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0A3D66" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- halo backdrop -->
+  <ellipse cx="380" cy="282" rx="228" ry="216" fill="#D9EDFB"/>
+  <circle cx="702" cy="92" r="22" fill="#D9EDFB"/>
+  <circle cx="92" cy="430" r="15" fill="#D9EDFB"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="392" cy="516" rx="268" ry="15" fill="#0A3D66" opacity="0.10"/>
+
+  <!-- main blob -->
+  <path d="M 384 44 C 492 38 596 86 636 170 C 674 252 668 342 614 406 C 562 468 478 498 384 494 C 290 490 206 460 164 390 C 122 320 126 230 170 162 C 216 92 292 50 384 44 Z" fill="url(#gWn)"/>
+
+  <!-- tone-on-tone clouds -->
+  <g fill="#0F6BA8" opacity="0.5">
+    <g transform="translate(540,108)">
+      <rect x="0" y="0" width="52" height="13" rx="6.5"/>
+      <circle cx="13" cy="-3" r="7"/>
+      <circle cx="29" cy="-2" r="6"/>
+    </g>
+    <g transform="translate(148,270)">
+      <rect x="0" y="0" width="44" height="12" rx="6"/>
+      <circle cx="11" cy="-3" r="6"/>
+      <circle cx="24" cy="-2" r="5"/>
+    </g>
+  </g>
+
+  <!-- floating dots + sparkle -->
+  <circle cx="688" cy="130" r="4" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="120" cy="180" r="3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="706" cy="272" r="3" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="196" cy="92" r="4" fill="#FFB55A"/>
+  <path d="M 654 200 L 656.5 206.5 L 663 209 L 656.5 211.5 L 654 218 L 651.5 211.5 L 645 209 L 651.5 206.5 Z" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- leaves -->
+  <g transform="translate(712,416)">
+    <ellipse cx="0" cy="0" rx="24" ry="9" transform="rotate(-35)" fill="#1E7A52"/>
+    <ellipse cx="11" cy="10" rx="18" ry="7" transform="rotate(-10)" fill="#57B98A"/>
+  </g>
+
+  <!-- ======== unified customer hub (centre) ======== -->
+  <g filter="url(#shW)">
+    <rect x="288" y="118" width="230" height="188" rx="14" fill="#FFFFFF"/>
+  </g>
+  <path d="M 288 132 C 288 124 294 118 302 118 L 504 118 C 512 118 518 124 518 132 L 518 152 L 288 152 Z" fill="#21346B"/>
+  <circle cx="304" cy="135" r="4.5" fill="#F7941D"/>
+  <circle cx="318" cy="135" r="4.5" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="332" cy="135" r="4.5" fill="#57B98A"/>
+
+  <!-- customer profile inside hub -->
+  <circle cx="334" cy="196" r="21" fill="#F7941D"/>
+  <circle cx="334" cy="189" r="8.5" fill="#FFFFFF"/>
+  <path d="M 318 209 C 320 198 348 198 350 209 L 350 214 L 318 214 Z" fill="#FFFFFF"/>
+  <rect x="366" y="180" width="96" height="10" rx="5" fill="#21346B"/>
+  <rect x="366" y="198" width="72" height="8" rx="4" fill="#9FB4D8"/>
+  <rect x="366" y="214" width="84" height="8" rx="4" fill="#D9E4F1"/>
+  <g fill="#F7941D">
+    <rect x="306" y="232" width="9" height="9" rx="2"/>
+    <rect x="319" y="232" width="9" height="9" rx="2"/>
+    <rect x="332" y="232" width="9" height="9" rx="2"/>
+    <rect x="345" y="232" width="9" height="9" rx="2"/>
+    <rect x="358" y="232" width="9" height="9" rx="2"/>
+  </g>
+  <rect x="306" y="254" width="156" height="9" rx="4.5" fill="#D9E4F1"/>
+  <rect x="306" y="270" width="120" height="9" rx="4.5" fill="#D9E4F1"/>
+  <circle cx="492" cy="280" r="21" fill="#2E9E6B"/>
+  <path d="M 481 280 L 489 288 L 504 271" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- ======== connection lines to app chips ======== -->
+  <g stroke="#FFFFFF" stroke-width="3.5" stroke-dasharray="1 9" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M 300 190 C 246 178 210 172 178 172"/>
+    <path d="M 300 260 C 252 282 224 294 198 312"/>
+    <path d="M 506 190 C 556 176 586 168 614 166"/>
+    <path d="M 506 262 C 552 286 578 296 602 312"/>
+  </g>
+
+  <!-- phone chip (left top) -->
+  <g transform="translate(112,140) rotate(-8)" filter="url(#shW2)">
+    <rect x="0" y="0" width="52" height="52" rx="11" fill="#FFFFFF"/>
+    <rect x="15" y="9" width="22" height="34" rx="4" fill="#21346B"/>
+    <rect x="19" y="14" width="14" height="20" rx="2" fill="#2D9CDB"/>
+    <circle cx="26" cy="38" r="2.5" fill="#F7941D"/>
+  </g>
+
+  <!-- chat chip (left bottom) -->
+  <g transform="translate(122,296) rotate(8)" filter="url(#shW2)">
+    <rect x="0" y="0" width="56" height="50" rx="11" fill="#FFFFFF"/>
+    <path d="M 12 12 L 44 12 C 47 12 49 14 49 17 L 49 27 C 49 30 47 32 44 32 L 26 32 L 18 40 L 18 32 L 12 32 C 9 32 7 30 7 27 L 7 17 C 7 14 9 12 12 12 Z" fill="#1B75BB"/>
+    <circle cx="19" cy="22" r="2.2" fill="#FFFFFF"/>
+    <circle cx="27" cy="22" r="2.2" fill="#FFFFFF"/>
+    <circle cx="35" cy="22" r="2.2" fill="#FFFFFF"/>
+  </g>
+
+  <!-- mail chip (right top) -->
+  <g transform="translate(614,132) rotate(8)" filter="url(#shW2)">
+    <rect x="0" y="0" width="58" height="46" rx="10" fill="#FFFFFF"/>
+    <rect x="8" y="8" width="42" height="30" rx="4" fill="none" stroke="#21346B" stroke-width="3.5"/>
+    <path d="M 12 14 L 29 26 L 46 14" stroke="#F7941D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- chart chip (right bottom) -->
+  <g transform="translate(606,296) rotate(-8)" filter="url(#shW2)">
+    <rect x="0" y="0" width="56" height="52" rx="11" fill="#FFFFFF"/>
+    <rect x="12" y="26" width="7" height="14" rx="2.5" fill="#2D9CDB"/>
+    <rect x="23" y="18" width="7" height="22" rx="2.5" fill="#1B75BB"/>
+    <rect x="34" y="10" width="7" height="30" rx="2.5" fill="#F7941D"/>
+  </g>
+
+  <!-- calendar mini chip (top centre-left) -->
+  <g transform="translate(232,86) rotate(-6)" filter="url(#shW2)">
+    <rect x="0" y="0" width="46" height="42" rx="8" fill="#FFFFFF"/>
+    <path d="M 0 8 C 0 3 3 0 8 0 L 38 0 C 43 0 46 3 46 8 L 46 16 L 0 16 Z" fill="#F7941D"/>
+    <g fill="#D9E4F1">
+      <rect x="7" y="22" width="8" height="7" rx="1.5"/>
+      <rect x="19" y="22" width="8" height="7" rx="1.5"/>
+      <rect x="31" y="22" width="8" height="7" rx="1.5"/>
+      <rect x="7" y="32" width="8" height="7" rx="1.5"/>
+    </g>
+    <rect x="19" y="32" width="8" height="7" rx="1.5" fill="#2E9E6B"/>
+  </g>
+
+  <!-- ======== female presenting beside hub ======== -->
+  <g>
+    <ellipse cx="262" cy="500" rx="32" ry="6" fill="#0A3D66" opacity="0.12"/>
+    <ellipse cx="250" cy="495" rx="8.5" ry="4.2" transform="rotate(-12 250 495)" fill="#10253F"/>
+    <ellipse cx="272" cy="497" rx="8.5" ry="4.2" fill="#10253F"/>
+    <path d="M 256 494 C 254 472 254 454 258 434" stroke="#16324F" stroke-width="9.5" stroke-linecap="round"/>
+    <path d="M 269 496 C 271 474 268 454 264 434" stroke="#1E3A5F" stroke-width="9.5" stroke-linecap="round"/>
+    <path d="M 252 432 C 249 402 251 382 256 374 C 262 368 278 368 284 374 C 289 382 290 402 286 432 L 254 432 Z" fill="#2E9E6B"/>
+    <path d="M 263 370 L 269 386 L 276 370 Z" fill="#FFFFFF"/>
+    <path d="M 256 380 C 248 388 248 397 253 402" stroke="#2E9E6B" stroke-width="8.5" stroke-linecap="round"/>
+    <path d="M 285 378 C 294 368 302 358 308 348" stroke="#2E9E6B" stroke-width="8.5" stroke-linecap="round"/>
+    <circle cx="252" cy="404" r="4.5" fill="#F4A988"/>
+    <circle cx="310" cy="344" r="4.5" fill="#F4A988"/>
+    <circle cx="268" cy="352" r="13.5" fill="#F4A988"/>
+    <path d="M 254 348 C 254 334 282 332 282 350 C 282 355 279 358 276 360 C 278 353 274 347 268 347 C 261 347 257 352 258 360 C 255 357 254 353 254 348 Z" fill="#F7941D"/>
+    <ellipse cx="282" cy="341" rx="6.5" ry="10" transform="rotate(28 282 341)" fill="#F7941D"/>
+    <circle cx="272" cy="355" r="2.2" fill="#E88B65"/>
+  </g>
+
+  <!-- ======== male seated right with phone ======== -->
+  <g>
+    <path d="M 664 460 C 664 442 666 428 670 414" stroke="#16324F" stroke-width="9.5" stroke-linecap="round"/>
+    <path d="M 690 462 C 692 446 692 430 690 416" stroke="#1E3A5F" stroke-width="9.5" stroke-linecap="round"/>
+    <ellipse cx="660" cy="464" rx="8.5" ry="4.2" transform="rotate(-14 660 464)" fill="#10253F"/>
+    <ellipse cx="694" cy="466" rx="8.5" ry="4.2" fill="#10253F"/>
+    <path d="M 656 420 C 654 396 656 380 662 372 C 668 366 688 366 694 372 C 700 380 701 396 698 420 Z" fill="#2D9CDB"/>
+    <path d="M 660 376 C 652 382 650 392 654 398" stroke="#2D9CDB" stroke-width="8.5" stroke-linecap="round"/>
+    <path d="M 696 378 C 704 384 706 394 702 400" stroke="#2D9CDB" stroke-width="8.5" stroke-linecap="round"/>
+    <circle cx="653" cy="400" r="4.5" fill="#C98850"/>
+    <circle cx="703" cy="402" r="4.5" fill="#C98850"/>
+    <circle cx="678" cy="352" r="13" fill="#C98850"/>
+    <path d="M 665 350 C 665 337 691 335 691 350 C 691 355 689 358 686 360 C 688 353 684 348 678 348 C 671 348 667 353 668 360 C 665 357 665 354 665 350 Z" fill="#1E3A5F"/>
+    <circle cx="682" cy="354" r="2.2" fill="#5C3A1E"/>
+    <!-- phone in hand -->
+    <g transform="translate(708,412) rotate(14)">
+      <rect x="0" y="0" width="24" height="38" rx="5" fill="#21346B"/>
+      <rect x="3" y="4" width="18" height="26" rx="2.5" fill="#2D9CDB"/>
+    </g>
+  </g>
+
+  <!-- plant left edge -->
+  <g transform="translate(96,470)">
+    <path d="M 0 0 C -2 -10 -4 -18 -9 -28 M 4 0 C 6 -8 8 -16 12 -24" stroke="#2E7D52" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="-11" cy="-30" rx="10" ry="4.5" transform="rotate(-32 -11 -30)" fill="#2E9E6B"/>
+    <ellipse cx="14" cy="-26" rx="10" ry="4.5" transform="rotate(30 14 -26)" fill="#57B98A"/>
+  </g>
+</svg>
