@@ -15,7 +15,8 @@ export default function AdminDashboard() {
   const [editing, setEditing] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState("");
-  const [query, setQuery] = useState("");\n  const [previewOpen, setPreviewOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [previewOpen, setPreviewOpen] = useState(false);
 
   async function load() {
     const session = await fetch("/api/admin/session", { cache: "no-store" }).then(r => r.json());
