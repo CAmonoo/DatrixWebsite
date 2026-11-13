@@ -201,21 +201,21 @@ export default function Header({ route, onRequestDemo, navigate }: HeaderProps) 
                 <ul className="row">
                   <li className="nav-item financial col-sm-12 col-md-6">
                     <a className="financial" href="#/financial" onClick={go("/financial")}>
-                      AccountingPhelo
+                      <span>AccountingPhelo</span>
+                      <p className="financial">
+                        Financials — AccountingPhelo puts your entire business
+                        accounting online.
+                      </p>
                     </a>
-                    <p className="financial">
-                      Financials — AccountingPhelo puts your entire business
-                      accounting online.
-                    </p>
                   </li>
                   <li className="nav-item payroll col-sm-12 col-md-6">
                     <a className="payroll" href="#/payroll" onClick={go("/payroll")}>
-                      HRPhelo
+                      <span>HRPhelo</span>
+                      <p className="payroll">
+                        HRMS — HRPhelo streamlines Payroll and HR management for
+                        organizations of any size.
+                      </p>
                     </a>
-                    <p className="payroll">
-                      HRMS — HRPhelo streamlines Payroll and HR management for
-                      organizations of any size.
-                    </p>
                   </li>
                 </ul>
               </li>
@@ -223,22 +223,22 @@ export default function Header({ route, onRequestDemo, navigate }: HeaderProps) 
                 <ul className="row">
                   <li className="nav-item contract col-sm-12 col-md-6">
                     <a className="contract" href="#/contract" onClick={go("/contract")}>
-                      Customized Software
+                      <span>Customized Software</span>
+                      <p className="contract">
+                        Datrix builds bespoke software shaped around the way you
+                        work — web, mobile and integrations that belong entirely
+                        to you.
+                      </p>
                     </a>
-                    <p className="contract">
-                      Datrix builds bespoke software shaped around the way you
-                      work — web, mobile and integrations that belong entirely
-                      to you.
-                    </p>
                   </li>
                   <li className="nav-item crm col-sm-12 col-md-6">
                     <a className="crm" href="#/crm" onClick={go("/crm")}>
-                      MarketingPhelo
+                      <span>MarketingPhelo</span>
+                      <p className="crm">
+                        CRM — MarketingPhelo keeps your pipeline organised,
+                        activities visible and deals moving to a close.
+                      </p>
                     </a>
-                    <p className="crm">
-                      CRM — MarketingPhelo keeps your pipeline organised,
-                      activities visible and deals moving to a close.
-                    </p>
                   </li>
                 </ul>
               </li>
