@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ReactDOM from "react-dom";
+import { preload } from "react-dom";
 import "./globals.css";
 import "../styles/WorkPhelo-fonts.css";
 import "../styles/bootstrap.css";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 // Above-the-fold art, brand marks and client logos — preloaded in the
 // exact order the production build serves them.
-const PRELOADS: [string, string][] = [
+const PRELOADS = [
   ["/assets/img/datrix-mark.png", "image"],
   ["/assets/img/datrix-logo.png", "image"],
   ["/assets/img/datrix-logo-white.png", "image"],
@@ -34,7 +34,7 @@ const PRELOADS: [string, string][] = [
   ["/assets/img/page-financials/iriskre.png", "image"],
   ["/assets/img/page-financials/sahare.jpg", "image"],
  
-];
+] as const;
 
 export default function RootLayout({
   children,
@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   for (const [href, as] of PRELOADS) {
-    ReactDOM.preload(href, { as });
+    preload(href, { as });
   }
   return (
     <html lang="en" suppressHydrationWarning>
