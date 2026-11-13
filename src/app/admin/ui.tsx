@@ -18,6 +18,15 @@ export default function AdminDashboard() {
   const [query, setQuery] = useState("");
   const [previewOpen, setPreviewOpen] = useState(false);
 
+  useEffect(() => {
+    if (!previewOpen) return;
+    function closeOnEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") setPreviewOpen(false);
+    }
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [previewOpen]);
+
   async function load() {
     const session = await fetch("/api/admin/session", { cache: "no-store" }).then(r => r.json());
     setAuthenticated(session.authenticated);
@@ -103,5 +112,22 @@ export default function AdminDashboard() {
       {filtered.length === 0 ? <p className="da-empty">No articles yet. Create your first article above.</p> : <div className="da-table-wrap"><table><thead><tr><th>Article</th><th>Category</th><th>Status</th><th>Last updated</th><th>Actions</th></tr></thead><tbody>{filtered.map(post => <tr key={post.id}><td><strong>{post.title}</strong><small>/{post.slug}</small></td><td>{post.category}</td><td><span className={post.status === "published" ? "da-published" : "da-draft"}>{post.status}</span></td><td>{new Date(post.updatedAt).toLocaleDateString()}</td><td><button className="da-link" onClick={() => edit(post)}>Edit</button><button className="da-link da-delete" onClick={() => remove(post.id)}>Delete</button>{post.status === "published" && <a className="da-link" href={`#/blog/${post.slug}`} target="_blank">Preview ↗</a>}</td></tr>)}</tbody></table></div>}
     </section>
     <footer className="da-footer">Datrix Tech Solutions · Blogs and Insights</footer>
+    {previewOpen && <div className="da-preview-backdrop" onClick={e => { if (e.target === e.currentTarget) setPreviewOpen(false); }}>
+      <article className="da-preview" role="dialog" aria-modal="true" aria-labelledby="da-preview-title">
+        <button type="button" className="da-preview-close" onClick={() => setPreviewOpen(false)} autoFocus>Close preview</button>
+        <span className="da-preview-category">{form.category || "Category"}</span>
+        <h1 id="da-preview-title">{form.title || "Article title"}</h1>
+        {form.excerpt && <p className="da-preview-excerpt">{form.excerpt}</p>}
+        {form.featuredImage && <img src={form.featuredImage} alt={form.title ? `Featured image for ${form.title}` : "Featured image"} />}
+        <div className="da-preview-content">
+          {form.content.split(/\n+/).map((line, i) =>
+            line.startsWith("## ") ? <h2 key={i}>{line.slice(3)}</h2> :
+            line.startsWith("# ") ? <h2 key={i}>{line.slice(2)}</h2> :
+            line.startsWith("- ") ? <p key={i}>• {line.slice(2)}</p> :
+            line.trim() ? <p key={i}>{line}</p> : null
+          )}
+        </div>
+      </article>
+    </div>}
   </main>;
 }

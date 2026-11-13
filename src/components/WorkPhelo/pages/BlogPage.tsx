@@ -211,7 +211,7 @@ export default function BlogPage({
 
           <div className="dt-blog-hero-orbit" aria-hidden="true">
             <span>INSIGHT</span>
-            <b>DX</b>
+            <b>Datrix</b>
           </div>
         </div>
       </section>
@@ -236,7 +236,7 @@ export default function BlogPage({
                 <img src={featured.featuredImage} alt="" />
               ) : (
                 <span>
-                  {isLive(featured) ? "DAT RIX INSIGHT" : featured.artLabel}
+                  {isLive(featured) ? "DATRIX INSIGHT" : featured.artLabel}
                 </span>
               )}
             </div>
