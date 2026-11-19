@@ -751,7 +751,7 @@
 .summary.active{position: fixed;}
 
 .desktop-screen{background: url('/assets/img/imac.png')center center no-repeat;width: 595px;height: 540px;background-size: 100%;padding: 20px;}
-.desktop-screen img{width: 100%;margin-top: 30px;}
+.desktop-screen img,.desktop-screen .crm-feature-image-placeholder{width: 100%;margin-top: 30px;}
 
 
 
@@ -790,6 +790,8 @@
 .total-time{right: 40px; bottom: 41px; font-size: 16px; }
 
 .payroll-features-points{background: url(/assets/img/payroll-feature.svg) top left no-repeat;background-size: contain; }
+.payroll-feature-visual{position: sticky;top: 15vh;min-height: 70vh;display: flex;align-items: center;justify-content: center;}
+.payroll-features-points .desktop-screen img{width: 100%;height: auto;}
 .payroll-module{background: url(/assets/img/payroll-modules.png) center center no-repeat;background-size: 100% 100%; }
 .module-tabs .nav-tabs{max-width: 500px; margin:0 auto; margin-bottom: 80px; background:#fff; border:solid 1px #440E62; border-radius: 35px; }
 .module-tabs .nav-tabs .nav-link{border-radius: 35px; border:none; padding: 20px; }
@@ -811,6 +813,9 @@
 
 .crm-feature{margin:0 auto;padding: 15px;}
 .crm-feature img{width: 200px;height: 200px;}
+.crm-feature-slide-visual{position: sticky;top: 15vh;min-height: 70vh;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;}
+.crm-feature-image-placeholder{aspect-ratio: 16 / 10;display: flex;align-items: center;justify-content: center;border: 2px dashed #cbd5e1;border-radius: 12px;background: #f8fafc;color: #64748b;}
+.crm-feature-slide-visual h3{margin-top: 1.5rem;}
 .crm-checklist span{background: linear-gradient(90deg, #E31B22 0%, #F7941D 100%);}
 
 
@@ -851,7 +856,7 @@
         /*Financial*/
         .sidebar-navbar{margin-left: 15px;}
         .desktop-screen{width: 500px;padding: 17px;}
-        .desktop-screen img{margin-top: 69px;}
+        .desktop-screen img,.desktop-screen .crm-feature-image-placeholder{margin-top: 69px;}
         .financial-table > div{position: static!important;margin-top: 60px;}
         .financial-table-section ul{width: 200px;}
         .our-products .request-btn{margin-top: -20px;}
@@ -973,7 +978,7 @@
         .financial-table{margin-top: 40px;}
         .progress{margin-left: 10px;}
         .desktop-screen{width: 360px;padding: 12px;}
-        .desktop-screen img{margin-top: 125px; }
+        .desktop-screen img,.desktop-screen .crm-feature-image-placeholder{margin-top: 125px; }
         .financial-table > div{position: static!important;}
 
         /*---Payroll --*/
@@ -1046,7 +1051,7 @@
         .easyToMigratePadding{padding: 50px 0 50px 20px;}
         .financial-table{margin-top: 40px;}
         .desktop-screen{width: 360px;padding: 12px;height: 350px;}
-        .desktop-screen img{margin-top: 30px;}
+        .desktop-screen img,.desktop-screen .crm-feature-image-placeholder{margin-top: 30px;}
         .financial-industries{display: block !important;}
         .call-to-action,.cta-heading h3{text-align: center!important;}
         .our-products .request-btn{margin-top: 0;}

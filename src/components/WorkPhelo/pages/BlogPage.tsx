@@ -3,6 +3,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { BLOG_POSTS, type BlogPost } from "../blogData";
+import ParticleField from "../ParticleField";
 
 type LivePost = {
   id: string;
@@ -189,6 +190,7 @@ export default function BlogPage({
   return (
     <main className="dt-blog-page">
       <section className="dt-blog-hero">
+        <ParticleField interactive />
         <div className="container dt-blog-hero-inner">
           <div className="dt-blog-eyebrow">
             <span /> BLOGS AND INSIGHTS

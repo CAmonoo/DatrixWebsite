@@ -27,7 +27,7 @@ export async function createAdminSession() {
   const value = `${expires}.${sign(expires)}`;
   (await cookies()).set(COOKIE_NAME, value, {
     httpOnly: true, secure: process.env.NODE_ENV === "production",
-    sameSite: "strict", path: "/", maxAge: MAX_AGE,
+    sameSite: "strict", path: "/",
   });
 }
 

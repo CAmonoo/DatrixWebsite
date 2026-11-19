@@ -34,7 +34,6 @@ export const HOME_CLIENTS = [
   "sahare.png",
   "silverline.png",
   "eye360.png",
-  // "adbghana.png",
   "silverlinehos.png",
   
 ].map((f) => `/assets/img/page-financials/${f}`);
@@ -44,10 +43,9 @@ export const PAYROLL_CLIENTS = [
   "sahare.png",
   "silverline.png",
   "eye360.png",
-  // "adbghana.png",
   "silverlinehos.png",
 
-].map((f) => `/assets/img/page-payroll/${f}`);
+].map((f) => `/assets/img/page-financials/${f}`);
 
 export interface Product {
   slug: string;

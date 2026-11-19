@@ -15,7 +15,7 @@ const CHECKLIST = [
 
 const FEATURE_SLIDES = [
   {
-    img: "/assets/img/page-financials/screen-accounting.svg",
+    img: "/assets/img/page-financials/screen-accounting.png",
     title: "Accounting",
     blocks: [
       {
@@ -28,7 +28,7 @@ const FEATURE_SLIDES = [
     ],
   },
   {
-    img: "/assets/img/page-financials/screen-inventory.svg",
+    img: "/assets/img/page-financials/screen-inventory.png",
     title: "Inventory",
     blocks: [
       {
@@ -41,7 +41,7 @@ const FEATURE_SLIDES = [
     ],
   },
   {
-    img: "/assets/img/page-financials/screen-sales-purchase.svg",
+    img: "/assets/img/page-financials/screen-sales-purchase.png",
     title: "Sales & Purchase",
     blocks: [
       {
@@ -58,7 +58,7 @@ const FEATURE_SLIDES = [
     ],
   },
   {
-    img: "/assets/img/page-financials/screen-bi.svg",
+    img: "/assets/img/page-financials/screen-bi.png",
     title: "Business Intelligence & Productivity",
     blocks: [
       {

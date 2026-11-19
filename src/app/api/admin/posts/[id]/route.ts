@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
+import { MAX_ARTICLE_CONTENT_LENGTH } from "@/lib/admin-content-limits";
 
 export const runtime = "nodejs";
 type Context = { params: Promise<{ id: string }> };
@@ -11,8 +12,11 @@ export async function PUT(request: NextRequest, context: Context) {
   const { id } = await context.params;
   try {
     const body = await request.json();
+    if (typeof body.content === "string" && body.content.length > MAX_ARTICLE_CONTENT_LENGTH) {
+      return NextResponse.json({ error: `Article content cannot exceed ${MAX_ARTICLE_CONTENT_LENGTH.toLocaleString()} characters.` }, { status: 400 });
+    }
     const title = clean(body.title, 180), excerpt = clean(body.excerpt, 320);
-    const content = clean(body.content, 50000), category = clean(body.category, 80);
+    const content = clean(body.content, MAX_ARTICLE_CONTENT_LENGTH), category = clean(body.category, 80);
     const status = body.status === "published" ? "published" : "draft";
     const tags = Array.isArray(body.tags) ? body.tags.map((t: unknown) => clean(t, 32)).filter(Boolean).slice(0, 12) : [];
     if (title.length < 3 || !excerpt || !content || !category) return NextResponse.json({ error: "Title, excerpt, content and category are required." }, { status: 400 });

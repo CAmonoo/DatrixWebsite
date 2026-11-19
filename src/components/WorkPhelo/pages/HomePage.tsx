@@ -10,7 +10,7 @@ const SERVICE_TABS = [
   {
     id: "financials",
     label: "Financials",
-    img: "/assets/img/Financials.svg",
+    img: "/assets/img/Financials.png",
     title: "AccountingPhelo",
     text: "AccountingPhelo automates every finance process end to end. Rich yet flexible financial management features let you follow the money moving in and out of your company within a secure, accurate environment. Powerful functionality smooths each transaction and puts all your financial data within instant reach, from high-level summaries right down to individual transactions.",
     btn: "financial",
@@ -19,7 +19,7 @@ const SERVICE_TABS = [
   {
     id: "hr",
     label: "HRMS",
-    img: "/assets/img/payroll.svg",
+    img: "/assets/img/payroll.png",
     title: "HRPhelo",
     text: "HRPhelo automates your HR and Payroll routines and hands you back up to 70% of your time. Hosted as Software as a Service (SaaS), it needs no extra infrastructure or database — just set it up and manage payrolls and notifications while every sensitive employee record stays protected on one platform.",
     btn: "payroll",
@@ -28,7 +28,7 @@ const SERVICE_TABS = [
   {
     id: "contract",
     label: "Customized Software",
-    img: "/assets/img/customized.svg",
+    img: "/assets/img/customized.png",
     title: "Customized Software",
     text: "No two businesses work alike — your software shouldn’t either. Datrix designs and builds customized software around the way you actually operate, from bespoke web and mobile apps to integrations linking the systems you already depend on. One expert team walks with you from idea to launch, and you finish owning a secure, scalable solution that evolves with your business.",
     btn: "contract",
@@ -37,7 +37,7 @@ const SERVICE_TABS = [
   {
     id: "CRM",
     label: "CRM",
-    img: "/assets/img/CRM.svg",
+    img: "/assets/img/CRM.png",
     title: "MarketingPhelo",
     text: "Lift customer satisfaction, deepen retention and expand sales rapidly with MarketingPhelo — the strategic CRM that empowers your Sales, Marketing and Customer Support teams. A transparent, fully customisable and remarkably easy-to-use system keeps everyone on the same page while cutting training time to a minimum.",
     btn: "crm",

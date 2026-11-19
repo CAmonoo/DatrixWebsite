@@ -1,55 +1,54 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ParticleField from "./../ParticleField";
 import { ClientsSlider } from "./../TestimonialSliders";
 import { PAYROLL_CLIENTS } from "./../data";
 
 const BENEFITS = [
   {
-    img: "feature-human-resource-management.svg",
+    img: "feature-human-resource-management.png",
     title: "Human Resource Management",
     text: "A capable HR system that follows each employee from hiring through performance and appraisal, training and skills administration, right up to exit scheduling.",
   },
   {
-    img: "feature-payroll-management.svg",
+    img: "feature-payroll-management.png",
     title: "Payroll Management",
     text: "Compute staff benefits, timesheets and overtime accurately while handling union dues, cooperative contributions and surcharges.",
   },
   {
-    img: "feature-employee-self-service.svg",
+    img: "feature-employee-self-service.png",
     title: "Employee Self Service",
     text: "Employees can view their complete personal bio data and transaction history whenever they need.",
   },
   {
-    img: "feature-automated-notification.svg",
+    img: "feature-automated-notification.png",
     title: "Automated Notifications",
     text: "Pending-transaction alerts go out automatically, and every staff member receives their payslip at the close of each payroll run.",
   },
   {
-    img: "feature-payroll-reporting.svg",
+    img: "feature-payroll-reporting.png",
     title: "Exceptional Payroll Reporting",
     text: "Live access to summary and detailed transactions alike, plus full audit trails.",
   },
   {
-    img: "feature-available-online.svg",
-    title: "Available Online 24/7",
-    text: "Delivered on a Software as a Service (SaaS) hosted platform — no spend required on infrastructure, servers or databases.",
+    img: "social-security.png",
+    title: "Social Security Management",
+    text: "Effortlessly manage employee social security contributions, and generate accurate statutory reports in one place.",
   },
 ];
 
 const HR_MODULES = [
   ["human-employee-biodata.svg", "Employee Bio Data"],
+  ["module-self-employee.svg", "Employee Self-Service"],
+  ["module-attandace-management.svg", "Attendance Management"],
   ["human-hiring.svg", "Hiring or Recruitment Management"],
-  ["human-entitlement-administration.svg", "Entitlement Administration"],
   ["human-employement-history.svg", "Employment History"],
-  ["human-education.svg", "Education"],
-  ["human-property-management.svg", "Property Management"],
-  ["human-job-position-skills.svg", "Job /Position/ Skills Administration"],
-  ["human-dependants.svg", "Dependants"],
-  ["human-disciplinary.svg", "Disciplinary/ Grievance"],
+  ["module-overtime.svg", "Smart Scheduling"],
+  ["human-property-management.svg", "Asset Management"],
+  ["module-security-management.svg", "Security management & Audit trail"],
+  //["human-disciplinary.svg", "Disciplinary/ Grievance"],
   ["human-performance.svg", "Performance & Appraisal Management"],
-  ["human-training-management.svg", "Training Management"],
   ["human-document-management.svg", "Document Management"],
 ];
 
@@ -57,16 +56,87 @@ const PAYROLL_MODULES = [
   ["module-payroll-dashboard.svg", "Payroll Dashboard"],
   ["module-payroll-allowance.svg", "Formula based Allowances & Deductions"],
   ["module-loan-mamangement.svg", "Loans Management"],
-  ["module-attandace-management.svg", "Attendance Management"],
-  ["module-overtime.svg", "Overtimes/Work Scheduling"],
-  ["module-single-group-payroll-processing.svg", "Single/Group Payroll Processing"],
-  ["module-emailing-payslip.svg", "Emailing Payslips"],
+  ["module-single-group-payroll-processing.svg", "Group Payroll Processing"],
+  ["module-emailing-payslip.svg", "Payslips Availiability"],
   ["module-standard-reports.svg", "Standard/Custom Reports"],
   ["module-gl-interface.svg", "GL Interface/Project Management"],
-  ["module-security-management.svg", "Security management & Audit trail"],
-  ["module-self-employee.svg", "Employee Self-Service"],
   ["module-workflow.svg", "Workflow"],
 ];
+
+function PayrollBenefitScroller() {
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeImg, setActiveImg] = useState(BENEFITS[0].img);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const src = (entry.target as HTMLElement).dataset.src;
+            if (src) setActiveImg(src);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+
+    contentRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const activeBenefit = BENEFITS.find((benefit) => benefit.img === activeImg);
+
+  return (
+    <section
+      className="features payroll-features-points sectionPadding"
+      id="features"
+    >
+      <div className="container">
+        <h2 className="text-center">
+          A Whole Host of Benefits for Your Organization
+        </h2>
+        <div className="row position-relative" id="feature1">
+          <div className="col-xs-12 col-sm-12 col-md-6 d-none d-md-block">
+            <div className="payroll-feature-visual">
+              <div className="desktop-screen desktop-img">
+                <img
+                  src={`/assets/img/page-payroll/${activeImg}`}
+                  alt={activeBenefit?.title ?? ""}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-xs-12 col-sm-12 col-md-5 offset-md-1">
+            {BENEFITS.map((benefit, idx) => (
+              <div
+                key={benefit.title}
+                ref={(el) => {
+                  contentRefs.current[idx] = el;
+                }}
+                className="easyToMigratePadding row align-items-center feature-content height100"
+                data-src={benefit.img}
+              >
+                <div className="col">
+                  <div className="desktop-screen d-md-none mb-4">
+                    <img
+                      src={`/assets/img/page-payroll/${benefit.img}`}
+                      alt=""
+                    />
+                  </div>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function PayrollPage({
   onRequestDemo,
@@ -145,26 +215,7 @@ export default function PayrollPage({
         </div>
       </section>
 
-      <section className="payroll-features-points sectionPadding" id="features">
-        <div className="container">
-          <h2 className="text-center">
-            A Whole Host of Benefits for Your Organization
-          </h2>
-          <div className="row mt5">
-            {BENEFITS.map((b) => (
-              <div className="col-md-4" key={b.title}>
-                <img
-                  src={`/assets/img/page-payroll/${b.img}`}
-                  alt={b.title}
-                  className="mb-3"
-                />
-                <h3 className="mainHeading3 colorBlack">{b.title}</h3>
-                <p>{b.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PayrollBenefitScroller />
 
       <section className="payroll-module sectionPadding">
         <div className="container">

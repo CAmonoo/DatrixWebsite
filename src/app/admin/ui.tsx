@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import CustomCursor from "@/components/WorkPhelo/CustomCursor";
+import { MAX_ARTICLE_CONTENT_LENGTH } from "@/lib/admin-content-limits";
 import { Eye, EyeOff } from "lucide-react";
 
 type Post = { id: string; slug: string; title: string; excerpt: string; content: string; category: string; tags: string[]; featuredImage: string | null; status: string; updatedAt: string };
@@ -153,7 +154,8 @@ export default function AdminDashboard() {
             <label>Tags <small>Separate with commas</small><input value={form.tags} onChange={e => setForm(f => ({ ...f, tags: e.target.value }))} placeholder="automation, finance, growth" /></label>
           </div>
           <label>Article content <small>Plain text / Markdown supported. Use ## for section headings and - for bullet points.</small>
-            <textarea className="da-content" rows={12} value={form.content} onChange={e => setForm(f => ({ ...f, content: e.target.value }))} required placeholder={"## Introduction\nWrite your article here…"} />
+            <textarea className="da-content" rows={12} maxLength={MAX_ARTICLE_CONTENT_LENGTH} value={form.content} onChange={e => setForm(f => ({ ...f, content: e.target.value }))} required placeholder={"## Introduction\nWrite your article here…"} />
+            <small aria-live="polite">{form.content.length.toLocaleString()} / {MAX_ARTICLE_CONTENT_LENGTH.toLocaleString()} characters</small>
           </label>
           <div className="da-upload-row">
             <label>Featured image<input type="file" accept="image/jpeg,image/png,image/webp,image/avif" onChange={e => upload(e.target.files?.[0])} /></label>
