@@ -15,7 +15,15 @@ export function OurProducts({ routeKey, navigate }: { routeKey: string; navigate
         <div className="row mt-5">
           {products.map((p: Product) => (
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4" key={p.title}>
-              <div className="product row">
+              <a
+                className="product product-link row"
+                href={`#${p.slug}`}
+                aria-label={`Explore ${p.title}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(p.slug);
+                }}
+              >
                 <div className="col p0">
                   <img src={p.packImg} alt={p.title} />
                 </div>
@@ -23,19 +31,15 @@ export function OurProducts({ routeKey, navigate }: { routeKey: string; navigate
                   <div className="position-relative">
                     <h2 className="mainHeading2 colorWhite">{p.title}</h2>
                     <p>{p.desc}</p>
-                    <a
-                      href={`#${p.slug}`}
+                    <span
                       className={`request-btn ${p.className}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        navigate(p.slug);
-                      }}
+                      aria-hidden="true"
                     >
                       <span className="fa-arrow-right"></span>
-                    </a>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </div>
@@ -50,40 +54,62 @@ export default function Footer({ navigate }: { navigate: (to: string) => void })
     navigate(to);
   };
   return (
-    <footer className="home-footer">
-      <div className="container footer-bottom">
-        <div className="row subfooter">
-          <div className="col-md-12">
-            <div className="footer-brand">
-              <a href="#/" onClick={go("/")} aria-label="Datrix Tech Solutions - Home">
-                <img src="/assets/img/datrix-logo-white.png" alt="Datrix Tech Solutions" />
-              </a>
-              <span className="footer-tagline">
-                Intelligent software <span className="dot">for</span> ambitious
-                businesses
-              </span>
-            </div>
+    <footer className="home-footer datrix-footer">
+      <div className="container">
+        <div className="datrix-footer-main">
+          <div className="datrix-footer-brand">
+            <a
+              href="#/"
+              onClick={go("/")}
+              aria-label="Datrix Tech Solutions - Home"
+              className="datrix-footer-logo"
+            >
+              <img
+                src="/assets/img/datrix-logo-white.png"
+                alt="Datrix Tech Solutions"
+              />
+            </a>
+            <p>
+              Intelligent software for ambitious businesses.
+            </p>
           </div>
-          <div className="col-md-6">
-            <p>&copy; Copyright 2019 - Datrix Tech Solutions</p>
-          </div>
-          <div className="col-md-6 text-right">
-            <ul className="social-links" style={{ listStyle: "none", margin: 0 }}>
-              <li>
-                <a href="#/blog" onClick={go("/blog")}>Blog</a>
-              </li>
-              <li>
-                <a href="#/privacy" onClick={go("/privacy")}>
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#/terms" onClick={go("/terms")}>
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-          </div>
+
+          <section className="datrix-footer-location" aria-labelledby="footer-location-title">
+            <h2 id="footer-location-title">Locate Us</h2>
+            <p>Head Office: 6 ARS Avenue, Ogbojo</p>
+            East-Legon, Accra
+            Ghana
+          </section>
+
+          <section className="datrix-footer-contact" aria-labelledby="footer-contact-title">
+            <h2 id="footer-contact-title">Get in touch</h2>
+            <p>Have a business challenge to solve? Let’s talk.</p>
+            <a href="mailto:info@datrixtechsolutions.com">
+              info@datrixtechsolutions.com
+            </a>
+            <a className="datrix-footer-contact-link" href="#/contact-us" onClick={go("/contact-us")}>
+              Contact our team <span aria-hidden="true">↗</span>
+            </a>
+          </section>
+
+          <nav className="datrix-footer-links" aria-label="Footer navigation">
+            <h2>Links</h2>
+            <a href="#/" onClick={go("/")}>Home</a>
+            <a href="#/#services" onClick={go("/#services")}>Our Products</a>
+            <a href="#/blog" onClick={go("/blog")}>Blog</a>
+            <a href="#/contact-us" onClick={go("/contact-us")}>Contact</a>
+          </nav>
+        </div>
+
+        <div className="datrix-footer-bottom">
+          <p>
+            Datrix Tech Solutions © {new Date().getFullYear()}. All Rights
+            Reserved.
+          </p>
+          <nav aria-label="Legal links">
+            <a href="#/privacy" onClick={go("/privacy")}>Privacy Policy</a>
+            <a href="#/terms" onClick={go("/terms")}>Terms of Service</a>
+          </nav>
         </div>
       </div>
     </footer>

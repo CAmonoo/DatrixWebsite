@@ -35,6 +35,8 @@ export const HOME_CLIENTS = [
   "silverline.png",
   "eye360.png",
   "silverlinehos.png",
+  "open-ai.png",
+  "claude-ai.png"
   
 ].map((f) => `/assets/img/page-financials/${f}`);
 

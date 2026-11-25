@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import ParticleField from "../ParticleField";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CONTACT_EMAIL = "info@datrixtechsolutions.com";
@@ -62,7 +63,7 @@ export default function ContactPage() {
       const result = await res.json().catch(() => null);
       if (!res.ok || !result?.ok) throw new Error(result?.error || "Unable to send");
       setSuccessMsg(
-        "Thanks for getting in touch — your message has been sent to our inbox. We’ll get back to you within one business day."
+        "Thanks for getting in touch. Your message has been sent to our inbox. We’ll get back to you within one business day."
       );
       setStatus("success");
       setName("");
@@ -82,14 +83,13 @@ export default function ContactPage() {
           __html: `.our-products,.home-footer{display: none;}`,
         }}
       />
-      <section className="contactSection sectionPadding contactApple">
+      <section className="contactSection sectionPadding contactApple contact-vibe-background vibe-hero vibe-hero--navy">
+        <ParticleField interactive />
         <div className="container">
           <div className="ca-head">
-            <span className="ca-kicker">Contact Us</span>
             <h1>Get in Touch</h1>
             <p className="ca-sub">
-              Tell us a little about your business — we’ll come back to you
-              within one business day.
+              Tell us about your business, and we’ll respond within one business day.
             </p>
           </div>
 

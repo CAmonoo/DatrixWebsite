@@ -33,6 +33,8 @@ const PRELOADS = [
   ["/assets/img/page-financials/eye360.png", "image"],
   ["/assets/img/page-financials/iriskre.png", "image"],
   ["/assets/img/page-financials/sahare.jpg", "image"],
+  ["/assets/img/page-financials/open-ai.png", "image"],
+  ["/assets/img/page-financials/claude-ai.png", "image"],
  
 ] as const;
 

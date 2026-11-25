@@ -155,7 +155,9 @@
 /* ------------------------------------------------------------------ */
 @media (max-width: 767.98px) {
 
-  html, body { overflow-x: hidden; }
+  html { overflow-x: hidden; }
+  /* Avoid creating a vertical scroll container that disables sticky panels. */
+  body { overflow-x: clip; }
 
   /* World map: fixed 600px height wastes half the screen on phones */
   #chartdiv { height: 300px !important; }

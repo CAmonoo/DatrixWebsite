@@ -9,7 +9,7 @@ const FEATURES_GRID = [
   {
     img: "feature-tailored.svg",
     title: "Built Around Your Workflows",
-    text: "We start by studying how your business genuinely runs, then build the software around it — never the reverse. Every screen, field and report reflects your real processes, so your team keeps working the way that already wins — just faster, with fewer errors.",
+    text: "We study how your business operates and build software around your processes, never the other way around. Every screen, field and report reflects your real workflows, helping your team work the way they know best, only faster and with fewer errors.",
   },
   {
     img: "feature-integration.svg",
@@ -19,7 +19,7 @@ const FEATURES_GRID = [
   {
     img: "feature-scalable.svg",
     title: "Grows As You Do",
-    text: "Begin with today’s essentials and bolt on modules as you expand. The modular architecture lets new features slot in cleanly without disturbing what already works — your software investment moves with the business, never against it.",
+    text: "Start with the essentials and add modules as your business grows. The modular architecture allows new features to integrate seamlessly without disrupting existing operations. Your software investment grows with your business, never against it.",
   },
   {
     img: "feature-security.svg",
@@ -29,31 +29,31 @@ const FEATURES_GRID = [
   {
     img: "feature-web-mobile.svg",
     title: "Web & Mobile Ready",
-    text: "With responsive web apps and mobile apps, your team works from the office, the field or home — on any device. Approve requests, capture data and watch the business from wherever the day takes you.",
+    text: "With responsive web and mobile apps, your team can work from the office, the field or home, using any device. Approve requests, capture data and monitor business operations wherever the day takes you.",
   },
   {
     img: "feature-analytics.svg",
     title: "Analytics & Reporting",
-    text: "Dashboards and bespoke reports convert raw business data into clear, usable insight, giving management genuine sight of performance, trends and outliers — decisions rest on facts, not guesswork.",
+    text: "Dashboards and bespoke reports transform raw business data into clear, actionable insights, giving management a clear view of performance, trends and outliers. Decisions are based on facts, not guesswork.",
   },
   {
     img: "feature-support.svg",
     title: "Dedicated Support",
-    text: "A dedicated build-and-support team remains at your side well past launch — training staff, answering questions and evolving the system as your needs shift. You’re never left to face your software alone.",
+    text: "A dedicated build-and-support team stays by your side long after launch, training staff, answering questions and evolving the system as your needs change. You’re never left to navigate your software alone.",
   },
   {
     img: "feature-ownership.svg",
     title: "Complete Ownership",
-    text: "The software belongs to you outright — source code, documentation, data and licences — free of per-user lock-in. Your asset, your rules, your edge in the market.",
+    text: "The software belongs to you outright, including source code, documentation, data and licences, with no per-user lock-in. Your asset, your rules, your edge in the market.",
   },
 ];
 
 const OFFERS = [
-  "A solution moulded precisely to your business processes — none of the generic features you pay for yet never touch.",
-  "A single trusted partner from idea to launch — Datrix covers analysis, design, development, testing and deployment all in-house.",
-  "You hold full ownership of the software — source code, documentation and data are yours, with no per-user lock-in or vendor dependence.",
-  "Smooth integration with the systems you already trust, spanning accounting, payroll, payment gateways and third-party APIs.",
-  "Deploy in the cloud or on-premises — Datrix works with the most secure hosting providers to lighten both your costs and your IT team’s load.",
+  "A solution moulded precisely to your business processes, without generic features you pay for but never use.",
+  "A single trusted partner from idea to launch. Datrix handles analysis, design, development, testing and deployment entirely in-house.",
+  "You retain full ownership of the software, including source code, documentation and data, with no per-user lock-in or vendor dependence.",
+  "Seamless integration with the systems you already trust, including accounting, payroll, payment gateways and third-party APIs.",
+  "Deploy in the cloud or on-premises. Datrix works with secure hosting providers to reduce costs and ease the workload on your IT team."
 ];
 
 export default function ContractPage({
@@ -130,21 +130,11 @@ export default function ContractPage({
             <div className="col-sm-12 col-md-12">
               <h2 className="text-center">Why Datrix Customized Software?</h2>
               <p>
-                Off-the-shelf packages expect your business to bend to their
-                way of working — Datrix Customized Software flips that
-                around. We design and build solutions around your real
-                workflows, letting your team stick to what it does best while
-                moving faster and making fewer mistakes. From the opening
-                workshop to the final handover, our analysts and engineers
-                chart your processes, confirm every detail with you and turn
-                them into a secure, scalable application your staff will
-                genuinely enjoy using. Because it’s built to fit, training
-                shrinks to almost nothing and adoption happens naturally. And
-                as the business expands, the same platform expands alongside
-                it — new modules, integrations and reports slot in whenever
-                needed, no starting from scratch. The result is software that
-                fits today and stands ready for tomorrow, with you owning
-                every line of code and every byte of data.
+                Off-the-shelf packages expect your business to bend to their way of working. Datrix Customized Software flips that around. 
+                We design and build solutions around your real workflows, letting your team stick to what it does best while moving faster and making fewer mistakes. 
+                From the opening workshop to the final handover, our analysts and engineers chart your processes, confirm every detail with you and turn them into a secure, scalable application your staff will genuinely enjoy using. 
+                Because it’s built to fit, training shrinks to almost nothing and adoption happens naturally. And as the business expands, the same platform expands alongside it. 
+                New modules, integrations and reports slot in whenever needed, no starting from scratch. The result is software that fits today and stands ready for tomorrow, with you owning every line of code and every byte of data.
               </p>
             </div>
           </div>
@@ -165,10 +155,12 @@ export default function ContractPage({
               </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6">
-              <img
-                src="/assets/img/page-contract/custom-flow.svg"
-                alt="From idea to launch"
-              />
+              <div className="desktop-screen desktop-img">
+                <img
+                  src="/assets/img/page-contract/custom-flow.png"
+                  alt="From idea to launch"
+                />
+              </div>
             </div>
           </div>
         </div>

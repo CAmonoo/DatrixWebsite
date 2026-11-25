@@ -99,7 +99,7 @@ export default function WorkPheloApp() {
       // keyed .page-swap fade already smooths the visual hand-off.
       window.scrollTo({ top: 0, behavior: "instant" });
     }
-  }, [route, anchor]);
+  }, [route, anchor, slug]);
 
   const navigate = useCallback((to: string) => {
     const target = `#${to}`;

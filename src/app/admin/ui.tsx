@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import CustomCursor from "@/components/WorkPhelo/CustomCursor";
+import ParticleField from "@/components/WorkPhelo/ParticleField";
 import { MAX_ARTICLE_CONTENT_LENGTH } from "@/lib/admin-content-limits";
 import { Eye, EyeOff } from "lucide-react";
 
@@ -97,12 +98,13 @@ export default function AdminDashboard() {
   if (!authenticated) return <>
     <CustomCursor />
     <main className="da-login-wrap">
+      <ParticleField interactive />
       <form className="da-login" onSubmit={login}>
         <a className="da-brand" href="/">DATRIX <span>TECH SOLUTIONS</span></a>
         <p className="da-kicker">PRIVATE CONTENT MANAGEMENT</p>
         <h1>Blogs and Insights</h1>
         <p>Sign in to manage your articles.</p>
-        <label>Admin password
+        <label>Enter password
           <div className="da-password-field">
             <input type={showPassword ? "text" : "password"} autoComplete="current-password" value={password} onChange={e => setPassword(e.target.value)} required />
             <button type="button" className="da-password-toggle" onClick={() => setShowPassword(show => !show)} aria-label={showPassword ? "Hide password" : "Show password"} aria-pressed={showPassword}>

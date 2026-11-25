@@ -381,7 +381,7 @@ section[id], div[id], footer[id] { scroll-margin-top: 92px; }
 .checklist .fa-check-circle:before { font-size: 18px; }
 .contract-intro-points li { color: var(--da-ink-2); }
 
-/* Home service tabs — quiet type, brand underline stays */
+/**Home service tabs — quiet type, brand underline stays **/
 .service-tabs .nav-link {
   font-size: 17px;
   font-weight: 500;
@@ -516,6 +516,11 @@ section[id], div[id], footer[id] { scroll-margin-top: 92px; }
   height: auto !important;
 }
 .desktop-screen img { border-radius: 12px; margin-top: 0 !important; }
+.contract-features .desktop-screen {
+  width: 100%;
+  max-width: 595px;
+  margin: 0 auto;
+}
 /* keep the device pane in view across the five feature slides (replaces the
    legacy .active{position:fixed} script with plain sticky) */
 @media (min-width: 992px) {
@@ -623,6 +628,16 @@ section[id], div[id], footer[id] { scroll-margin-top: 92px; }
    ------------------------------------------------------------ */
 .our-products {
   background: linear-gradient(180deg, #22366f 0%, #1e2f63 100%) !important;
+}
+.our-products .product-link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+.our-products .product-link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 4px;
+  border-radius: 12px;
 }
 .our-products .mainHeading3 { font-weight: 600; letter-spacing: -0.015em; }
 .our-products p { color: rgba(255, 255, 255, 0.78); font-size: 15px; line-height: 1.7; }

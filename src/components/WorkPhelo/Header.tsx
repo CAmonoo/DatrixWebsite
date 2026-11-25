@@ -37,11 +37,12 @@ const FEATURES_MENU: Partial<
   ],
   payroll: [
     { label: "Dashboards", slug: "/payroll#features" },
+    { label: "Human Resource Management", slug: "/payroll#features" },
+    { label: "Payroll Management", slug: "/payroll#features" },
     { label: "Employee Self Service", slug: "/payroll#features" },
-    { label: "Workflow", slug: "/payroll#features" },
     { label: "Automated Notifications", slug: "/payroll#features" },
-    { label: "Custom Reports", slug: "/payroll#features" },
-    { label: "Available Online 24/7", slug: "/payroll#features" },
+    { label: "Exceptional Payroll Reporting", slug: "/payroll#features" },
+    { label: "Social Security Management", slug: "/payroll#features" },
     { label: "All Features", slug: "/payroll#features" },
   ],
   contract: [

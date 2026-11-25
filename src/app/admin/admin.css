@@ -543,27 +543,25 @@
 }
 
 .da-login-wrap {
+  position: relative;
+  isolation: isolate;
   display: grid;
   place-items: center;
   overflow: hidden;
   padding: 24px;
-  background:
-    radial-gradient(760px 420px at 90% 8%, rgba(27, 117, 187, 0.12), transparent 63%),
-    radial-gradient(700px 420px at 5% 90%, rgba(247, 148, 29, 0.12), transparent 60%),
-    #f6f7fa;
-  animation: dm-fade-in 0.45s var(--ease-soft) both;
+  background: linear-gradient(112deg, #ee8312 0%, #f7941d 40%, #ffa62b 74%, #ffb944 100%);
 }
 
 .da-login {
   position: relative;
+  z-index: 1;
   width: min(100%, 460px);
   overflow: hidden;
-  border: 1px solid rgba(33, 52, 107, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 18px;
   padding: 44px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 24px 80px rgba(24, 39, 68, 0.12);
-  animation: dm-modal-in 0.5s var(--ease-soft) both;
+  background: linear-gradient(145deg, #141f42 0%, #21346b 55%, #1b75bb 100%);
+  box-shadow: 0 24px 80px rgba(8, 15, 39, 0.32), 0 0 32px rgba(94, 203, 255, 0.12);
 }
 
 .da-login::before {
@@ -579,19 +577,30 @@
 .da-login .da-brand {
   display: inline-block;
   margin-bottom: 42px;
+  color: #fff !important;
+}
+
+.da-login .da-brand span {
+  color: #c8d8ee;
 }
 
 .da-login .da-kicker {
   margin-bottom: 12px;
+  color: #a9d8f5;
 }
 
 .da-login h1 {
   font-size: 36px;
+  color: #fff;
+}
+
+.da-login label {
+  color: #edf4ff;
 }
 
 .da-login > p:not(.da-kicker) {
   margin: 12px 0 28px;
-  color: var(--da-muted);
+  color: rgba(237, 244, 255, 0.78);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -620,14 +629,14 @@
   transform: none;
   background: transparent;
   box-shadow: none;
-  color: var(--da-blue);
+  color: #1b75bb;
   transition: color var(--motion-base) var(--ease-soft), background-color var(--motion-base) var(--ease-soft);
 }
 
 .da-login .da-password-toggle:hover,
 .da-login .da-password-toggle:active {
   transform: none;
-  background: #edf5fb;
+  background: #e6f4ff;
   box-shadow: none;
   color: var(--da-navy);
 }
@@ -643,8 +652,16 @@
   text-align: center;
 }
 
+.da-login .da-back {
+  color: #d7e5f6;
+}
+
+.da-login .da-back:hover {
+  color: #fff;
+}
+
 .da-login .da-notice {
-  color: #b54b40;
+  color: #ffc2bc;
 }
 
 .da-preview-backdrop {
