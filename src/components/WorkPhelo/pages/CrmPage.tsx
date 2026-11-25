@@ -268,8 +268,12 @@ export default function CrmPage({
               </div>
             </div>
             <div className="col-md-6 col-sm-12 m-auto">
-              <div>
-                <img src="/assets/img/page-crm/why-need-CRM.svg" alt="Why you need CRM" />
+              <div className="desktop-screen crm-page-device">
+                <img
+                  className="crm-page-device-image"
+                  src="/assets/img/CRM.png"
+                  alt="Why you need CRM"
+                />
               </div>
             </div>
           </div>
@@ -280,8 +284,12 @@ export default function CrmPage({
         <div className="container">
           <div className="row sectionPadding">
             <div className="col-xs-12 col-sm-12 col-md-6 m-auto">
-              <div>
-                <img src="/assets/img/page-crm/why-CRM.svg" alt="Why MarketingPhelo" />
+              <div className="desktop-screen crm-page-device">
+                <img
+                  className="crm-page-device-image"
+                  src="/assets/img/page-crm/why-need-CRM.png"
+                  alt="Why MarketingPhelo"
+                />
               </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 ml-auto">

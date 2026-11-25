@@ -113,6 +113,8 @@ h2.text-center:after{content:"";opacity:.3;background:currentColor;width:62px;he
 .vibe-scroll-top{background:var(--vb-orange);color:#fff;cursor:pointer;width:44px;height:44px;transition:transform var(--motion-base)var(--ease-soft);z-index:2;border:0;border-radius:50%;place-items:center;display:grid;position:absolute;top:-22px;right:clamp(16px,3vw,40px);box-shadow:0 10px 24px #f7941d59}
 .vibe-scroll-top:hover{transform:translateY(-3px)}
 .vibe-scroll-top.workphelo-scroll-top{position:fixed;top:auto;right:clamp(16px,3vw,40px);bottom:calc(24px + env(safe-area-inset-bottom));z-index:1000}
+.crm .crm-page-device{width:100%;max-width:560px;height:auto;margin:0 auto 24px;padding:clamp(8px,1.2vw,16px)!important;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center}
+.crm .crm-page-device-image{display:block;width:100%;height:auto;margin:0!important;object-fit:contain}
 .contactSection.vibe-hero{min-height:100vh;padding-bottom:110px}
 .contactSection.vibe-hero .contact-form-container{box-shadow:none!important;background:0 0!important;border-radius:0!important;padding:14px 0 0!important}
 .contactSection.vibe-hero .contact-form-container .form-default{background:0 0}
